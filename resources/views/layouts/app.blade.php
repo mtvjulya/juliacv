@@ -21,10 +21,10 @@
 {{--    <script src="{{ asset('app-4681dad3.js') }}"></script>--}}
 {{--    <script src="{{ asset('resources/js/scrollLinks.js') }}"></script>--}}
 {{--    <script src="{{ asset('resources/js/scrollLinks.js') }}"></script>--}}
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/scrollLinks.js'])
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ mix('js/scrollLinks.js') }}"></script>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+{{--    <link href="{{ mix('css/app.css') }}" rel="stylesheet">--}}
+{{--    <script src="{{ mix('js/app.js') }}"></script>--}}
+{{--    <script src="{{ mix('js/scrollLinks.js') }}"></script>--}}
 </head>
 <body class="page-body">
     <div id="app">
