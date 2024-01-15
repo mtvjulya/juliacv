@@ -1,0 +1,26 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+//Global
+@import "global";
+
+
+
+// Bootstrap
+//@import 'bootstrap/scss/bootstrap';
+
+//Blocks
+@import "intro";
+@import "language-button";
+@import "nav";
+@import "page-main";
+@import "about";
+@import "card";
+@import "traits";
+@import "projects";
+@import "project";
+@import "experience";
+@import "contact";

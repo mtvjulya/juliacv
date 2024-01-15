@@ -1,0 +1,143 @@
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $black;
+    color: $white;
+    background-image: url('/storage/app/public/intro-3.jpg');
+}
+
+.intro__languge-battons-wrapper {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    //width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.intro__name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3em;
+    @media (max-width: 767px) {
+        font-size: 2em;
+    }
+}
+
+.intro__detail {
+    color: $accent-color;
+}
+
+.intro__detail--uppercase {
+    text-transform: uppercase;
+}
+
+.intro__text-wrapper {
+
+    margin-left: auto;
+    text-align: right;
+    @media (max-width: $desktop) {
+        width: min-content;
+    }
+}
+
+.intro__text {
+
+
+    @media (max-width: 767px) {
+        font-size: 1em;
+    }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 1.5em;
+    }
+    @media (min-width: 1200px) {
+        font-size: 2em;
+    }
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.intro__image-wrapper {
+    position: absolute;
+    bottom: 0;
+
+    left: 0;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.intro__image-container {
+
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+}
+
+
+.intro__image {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    object-position: bottom;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    // transition: opacity 0.3s ease;
+}
+
+.intro__image-wrapper:hover .intro__image {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+}
+
+.intro__image-wrapper:hover .intro__image-container {
+    background-image: url("/storage/app/public/me-5.png");
+    opacity: 1;
+    transition: opacity 0s ease;
+}
+
+/* Если вы хотите, чтобы представление изменилось при наведении, можете использовать следующий код */
+
+//
+//@keyframes fade {
+//    0% { opacity: 1; }
+//    100% { opacity: 0.6; }
+//}
+@media (max-width: 767px) {
+    .intro__image {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        object-position: bottom;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        // transition: opacity 0.3s ease;
+    }
+}

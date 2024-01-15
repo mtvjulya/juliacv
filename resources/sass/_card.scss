@@ -1,0 +1,145 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    // max-width: 350px;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+    background-color: $white;
+    color: $black;
+    margin: 10px;
+    // padding-top: 150px;
+}
+
+.card__header-wrapper {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    background: linear-gradient(10deg, $yellow 10%, $accent-color 80%);
+}
+
+.card__header-wrapper--experience {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    height: 50%;
+}
+
+.card__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid $black;
+    box-shadow: 0 -5px 10px 3px rgba($black, 0.8);
+}
+
+.card__logo--bounce {
+    animation: bounce 0.4s ease 0.8s 2;
+}
+
+.card__header {
+    margin: 0;
+    padding: 0;
+    //border-radius: 10px;
+    text-transform: uppercase;
+}
+
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px 40px;
+    width: 100%;
+
+}
+
+.card__list--education {
+    list-style: '📚';
+}
+
+.card__list--hard-skills {
+    list-style: '💻';
+}
+
+
+.card__list--lang {
+    list-style: '🌍';
+}
+
+.card__list--awards {
+    list-style: '🏆';
+}
+
+.card__list--experience {
+    list-style: '😊';
+}
+
+
+.card__item {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.card__item:last-child {
+    margin-bottom: 0;
+}
+
+.card__item-name {
+
+    font-weight: bold;
+}
+
+@media (max-width: $mobile) {
+    .card {
+        // width:240px;
+    }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+    .card {
+
+        width: 23%;
+        max-width: 23%;
+    }
+
+    .card__list {
+
+        padding: 20px 20px 20px 40px;
+
+
+    }
+}
+
+@media (min-width: $desktop) {
+
+    .card__header {
+        // font-size: 4em;
+    }
+    .card {
+
+        width: 23%;
+        //max-width: 300px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}

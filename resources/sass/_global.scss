@@ -1,0 +1,62 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    padding: 0;
+    background-color: $white;
+    color: $black;
+    font-size: 16px;
+    line-height: 1.2;
+
+}
+
+.page-body {
+    font-family: $font-family-sans-serif;
+    min-width: 320px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main-wrapper {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+
+        width: 90%;
+        margin: auto;
+    }
+    @media (min-width: $desktop) {
+        width: 80%;
+        max-width: 1600px;
+        margin: auto;
+    }
+}
+
+.paragragh {
+    padding: 0;
+    margin: 0;
+}
+
+.clear-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main__title {
+    text-transform: uppercase;
+    font-size: 2em;
+    @media (min-width: $desktop) {
+        font-size: 3em;
+    }
+}

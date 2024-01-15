@@ -1,0 +1,57 @@
+.language-button {
+    position: relative;
+    color: $white;
+    width: 8em;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    line-height: 2em;
+
+    //animation: pulse 2s infinite;
+}
+
+.language-button::before {
+    position: absolute;
+    content: "";
+    left: 0;
+
+    top: 0;
+    width: 1.5em;
+    height: 1.5em;
+    color: $black;
+    border-bottom: 0.5em solid $white;
+    border-left: 0.5em solid $white;
+    transform: rotate(45deg);
+    animation: pulse 2s infinite;
+}
+
+.language-button::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    width: 1.5em;
+    height: 1.5em;
+    color: $black;
+    border-bottom: 0.5em solid $white;
+    border-left: 0.5em solid $white;
+    transform: rotate(-135deg);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+
+        opacity: 0;
+    }
+}
+
