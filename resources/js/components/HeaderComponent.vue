@@ -19,7 +19,7 @@ export default {
             const stickyNav = document.querySelector('.nav');
             const intro = document.querySelector('.intro');
             const stickySectionOffsetTop = intro.offsetHeight;
-            console.log(stickySectionOffsetTop);
+
         window.onscroll = function() {
             if (window.pageYOffset >= stickySectionOffsetTop) {
                 stickyNav.classList.add('sticky');

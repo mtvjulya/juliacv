@@ -229,7 +229,7 @@ export default {
             if (window.innerWidth > 768 && window.innerWidth < 1200) {
 
                 width = aboutWrapper.offsetWidth / 2 - 20;
-                console.log('width'+width);
+
 
             } else {
                 width = aboutWrapper.offsetWidth - 60;
