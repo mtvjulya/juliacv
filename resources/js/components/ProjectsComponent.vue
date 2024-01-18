@@ -7,7 +7,8 @@
 
                 <h3 class="project__title">{{ project.title }}</h3>
                 <button class="project__button" type="button" @click="openPopup(index)">
-                    <img class="project__pic project__pic-small" :src="project.image" width="100" height="100" :alt="project.title">
+                    <img class="project__pic project__pic-small" :src="project.image" width="100" height="100"
+                         :alt="project.title">
                 </button>
             </li>
         </ul>
@@ -17,7 +18,8 @@
 
                 <h3 class="project__title">{{ project.title }}</h3>
                 <button class="project__button" type="button" @click="openPopup(index)">
-                    <img class="project__pic project__pic-small" :src="project.image" width="100" height="100" :alt="project.title">
+                    <img class="project__pic project__pic-small" :src="project.image" width="100" height="100"
+                         :alt="project.title">
                 </button>
             </li>
         </ul>
@@ -27,7 +29,7 @@
                 <button class="project__close-popup-button" type="button" aria-label="close"
                         @click="closePopup()" title="Close"></button>
                 <h3 class="project__popup-title">{{
-                         this.projects[this.currentPopupIndex].title
+                        this.projects[this.currentPopupIndex].title
                     }}</h3>
                 <ul class="project__features-list clear-list">
                     <li class="project__features-item"
@@ -36,22 +38,30 @@
                 </ul>
                 <p class="project__text">{{ this.projects[this.currentPopupIndex].description }}</p>
                 <a :href="projects[currentPopupIndex].project_link" target="_blank">
-                <img class="project__pic" :src="projects[currentPopupIndex].popup_image" width="100" height="100"
-                     :alt="projects[currentPopupIndex].title">
+                    <img class="project__pic" :src="projects[currentPopupIndex].popup_image" width="100" height="100"
+                         :alt="projects[currentPopupIndex].title">
                 </a>
             </div>
         </div>
 
         <div v-else class="project__popup-wrapper" v-show="popupOpen " v-if="projectsRu.length > 0">
             <div class="project__popup">
-                <button class="project__close-popup-button" type="button" aria-label="close" @click="closePopup()" title="Закрыть"></button>
-                <h3 class="project__popup-title">{{ projectsRu.length > 1 ? projectsRu[currentPopupIndex].title : '' }}</h3>
+                <button class="project__close-popup-button" type="button" aria-label="close" @click="closePopup()"
+                        title="Закрыть"></button>
+                <h3 class="project__popup-title">{{
+                        projectsRu.length > 1 ? projectsRu[currentPopupIndex].title : ''
+                    }}</h3>
                 <ul class="project__features-list clear-list">
-                    <li class="project__features-item" v-for="feature in projectsRu[currentPopupIndex].features">{{ feature }}</li>
+                    <li class="project__features-item" v-for="feature in projectsRu[currentPopupIndex].features">
+                        {{ feature }}
+                    </li>
                 </ul>
-                <p class="project__text">{{ projectsRu.length > 1 ? projectsRu[currentPopupIndex].description : '' }}</p>
+                <p class="project__text">{{
+                        projectsRu.length > 1 ? projectsRu[currentPopupIndex].description : ''
+                    }}</p>
                 <a :href="projectsRu[currentPopupIndex].project_link" target="_blank">
-                    <img class="project__pic" :src="projectsRu[currentPopupIndex].popup_image" width="100" height="100" :alt="projectsRu[currentPopupIndex].title">
+                    <img class="project__pic" :src="projectsRu[currentPopupIndex].popup_image" width="100" height="100"
+                         :alt="projectsRu[currentPopupIndex].title">
                 </a>
 
             </div>
@@ -145,7 +155,7 @@ export default {
             });
         });
 
-        function scrollExperience(padding, translate) {
+        function scrollProjects(padding, translate) {
             projectsSection.style.paddingTop = padding + 'px';
             projectsHeader.style.transform = 'translateY(-' + translate + 'px)';
             projectsList.style.transform = 'translateY(-' + translate + 'px)';
@@ -154,27 +164,26 @@ export default {
         window.addEventListener('scroll', function () {
             let scrollPosition = window.pageYOffset;
             let offset = traitsSection.offsetHeight;
-            if (scrollPosition / 3 > offset && scrollPosition / 4 < offset && window.innerWidth < 767) {
+            if (scrollPosition / 2.5 > offset && scrollPosition / 2.9 < offset && window.innerWidth < 767) {
+                scrollProjects(100, 20);
 
-                scrollExperience(50, 20);
+            } else if (scrollPosition / 2.6 >= offset  && window.innerWidth < 767) {
+                scrollProjects(100, 10);
 
-            } else if (scrollPosition / 2.4 >= offset && scrollPosition / 2.7 <= offset && window.innerWidth < 767) {
-
-                scrollExperience(100, 10);
             } else if (scrollPosition / 2.4 > offset && scrollPosition / 2.9 < offset && window.innerWidth >= 1200) {
 
-                scrollExperience(110, 80);
+                scrollProjects(110, 80);
             } else if (scrollPosition / 2.95 >= offset && window.innerWidth >= 1200) {
 
-                scrollExperience(130, 10);
+                scrollProjects(130, 10);
 
-            } else if (scrollPosition / 3 >= offset && scrollPosition / 4 < offset && window.innerWidth >= 767 && window.innerWidth < 1200) {
+            } else if (scrollPosition / 3 >= offset  && window.innerWidth >= 767 && window.innerWidth < 1200) {
 
-                scrollExperience(150, 10);
+                scrollProjects(150, 100);
 
-            } else if (scrollPosition / 2.6 >= offset && scrollPosition / 2.9 < offset && window.innerWidth >= 767 && window.innerWidth < 1200) {
+            } else if (scrollPosition / 2.6 >= offset && scrollPosition / 3 < offset && window.innerWidth >= 767 && window.innerWidth < 1200) {
 
-                scrollExperience(75, 10);
+                scrollProjects(150, 100);
             } else {
                 //experienceSection.style.paddingTop = '40px';
                 projectsHeader.style.transform = 'translateY(100px)';

@@ -4,34 +4,21 @@
 
             <h2 class="main__title traits__title">{{ currentLang === 'en' ? 'Traits' : 'Качества' }}</h2>
 
-            <div v-if="currentLang === 'en'" class="traits__blocks-wrapper">
+            <div  class="traits__blocks-wrapper">
                 <div class="traits__block">
-                    <p class="paragragh traits__text">Passionate about Technology and Design</p>
+                    <p class="paragragh traits__text">{{ currentLang === 'en' ? 'Passionate about Technology and Design' : 'Обожаю технологии и дизайн' }}</p>
                 </div>
                 <div class="traits__block">
-                    <p class="paragragh traits__text">Eager to Upskill and Qualification</p>
+                    <p class="paragragh traits__text">{{ currentLang === 'en' ? 'Eager to Upskill and Qualification' : 'Стремлюсь к постоянному улучшению навыков' }}</p>
                 </div>
                 <div class="traits__block">
-                    <p class="paragragh traits__text">Eager to Get My Hands Dirty with State-of-the-Art Tech</p>
+                    <p class="paragragh traits__text">{{ currentLang === 'en' ? 'Eager to Get My Hands Dirty with State-of-the-Art Tech' : 'Не боюсь испачкать руки в самых современных технологиях' }}</p>
                 </div>
                 <div class="traits__block">
-                    <p class="paragragh traits__text">Learn and Adapt Quickly</p>
-                </div>
-            </div>
-            <div v-else class="traits__blocks-wrapper">
-                <div class="traits__block">
-                    <p class="paragragh traits__text">Обожаю технологии и дизайн</p>
-                </div>
-                <div class="traits__block">
-                    <p class="paragragh traits__text">Стремлюсь к постоянному улучшению навыков</p>
-                </div>
-                <div class="traits__block">
-                    <p class="paragragh traits__text">Не боюсь испачкать руки в самых современных технологиях</p>
-                </div>
-                <div class="traits__block">
-                    <p class="paragragh traits__text">Быстро учусь и адаптируюсь</p>
+                    <p class="paragragh traits__text">{{ currentLang === 'en' ? 'Learn and Adapt Quickly' : 'Быстро учусь и адаптируюсь' }}</p>
                 </div>
             </div>
+
         </div>
     </section>
 </template>

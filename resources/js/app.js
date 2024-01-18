@@ -10,6 +10,7 @@ import ExperienceComponent from "./components/ExperienceComponent.vue";
 import ContactComponent from "./components/ContactComponent.vue";
 
 const app = createApp({});
+
 app.component('intro-component', IntroComponent);
 app.component('languageButton-component', LanguageButton);
 app.component('nav-component', NavComponent);
@@ -22,20 +23,35 @@ app.component('contact-component', ContactComponent);
 
 app.mount('#app');
 
-const navLinks = document.querySelectorAll('nav ul li a');
-const sections = document.querySelectorAll('.section-link');
-
-function addActiveClass() {
-    sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('nav__link--active');
-            });
-            navLinks[index].classList.add('nav__link--active');
-        }
-    });
-}
-
-window.addEventListener('scroll', addActiveClass);
+// const navLinks = document.querySelectorAll('.nav__link--en');
+// const navLinksRu = document.querySelectorAll('.nav__link--ru');
+// const sections = document.querySelectorAll('.section-link');
+// const navItems = document.querySelectorAll('.nav__item--en');
+// const navItemsRu = document.querySelectorAll('.nav__item--ru');
+// function addActiveClass() {
+//     sections.forEach((section, index) => {
+//         const rect = section.getBoundingClientRect();
+//
+//         if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+//             navItems.forEach(navItem => {
+//                 navItem.classList.remove('nav__item--active');
+//             });
+//             navItemsRu.forEach(navItem => {
+//                 navItem.classList.remove('nav__item--active');
+//             });
+//             navLinks.forEach(navLink => {
+//                 navLink.classList.remove('nav__link--active');
+//             });
+//             navLinksRu.forEach(navLink => {
+//                 navLink.classList.remove('nav__link--active');
+//             });
+//             navItems[index].classList.add('nav__item--active');
+//             navLinks[index].classList.add('nav__link--active');
+//             navItemsRu[index].classList.add('nav__item--active');
+//
+//             navLinksRu[index].classList.add('nav__link--active');
+//         }
+//     });
+// }
+//
+// window.addEventListener('scroll', addActiveClass);

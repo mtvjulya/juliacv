@@ -1,44 +1,62 @@
 .language-button {
     position: relative;
-    color: $white;
+    margin: 5px;
     width: 8em;
     border: none;
+    //background-color: rgba($accent-color,0.5);
     background-color: transparent;
     text-transform: uppercase;
     font-family: 'Nunito', sans-serif;
     line-height: 2em;
 
+    color: $yellow;
+    background-color: rgba($accent-color, 0.5);
+    cursor: pointer;
     //animation: pulse 2s infinite;
+    @media (max-width: 767px) {
+        font-size: 1em;
+    }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        font-size: 1.2em;
+    }
+    @media (min-width: 1200px) {
+        font-size: 1.2em;
+    }
 }
 
-.language-button::before {
-    position: absolute;
-    content: "";
-    left: 0;
-
-    top: 0;
-    width: 1.5em;
-    height: 1.5em;
-    color: $black;
-    border-bottom: 0.5em solid $white;
-    border-left: 0.5em solid $white;
-    transform: rotate(45deg);
-    animation: pulse 2s infinite;
+.language-button:hover {
+    color: $accent-color;
+    background-color: rgba($yellow, 0.5);
 }
 
-.language-button::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    width: 1.5em;
-    height: 1.5em;
-    color: $black;
-    border-bottom: 0.5em solid $white;
-    border-left: 0.5em solid $white;
-    transform: rotate(-135deg);
-    animation: pulse 2s infinite;
-}
+//.language-button::before {
+//    position: absolute;
+//    content: "";
+//    left: 0;
+//
+//    top: 0;
+//    width: 1.5em;
+//    height: 1.5em;
+//    color: $black;
+//    border-bottom: 0.5em solid $white;
+//    border-left: 0.5em solid $white;
+//    transform: rotate(45deg);
+//    animation: pulse 2s infinite;
+//}
+//
+//.language-button::after {
+//    position: absolute;
+//    content: "";
+//    right: 0;
+//    top: 0;
+//    width: 1.5em;
+//    height: 1.5em;
+//    color: $black;
+//    border-bottom: 0.5em solid $white;
+//    border-left: 0.5em solid $white;
+//    transform: rotate(-135deg);
+//    animation: pulse 2s infinite;
+//}
 
 @keyframes pulse {
     0% {

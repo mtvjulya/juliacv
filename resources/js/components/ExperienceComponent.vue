@@ -2,152 +2,124 @@
     <section class="experience section-link" id="experience">
         <h2 class="main__title experience__title">{{ currentLang === 'en' ? 'Experience' : 'Опыт работы' }}</h2>
 
-        <div v-if="currentLang === 'en'" class="experience__wrapper">
+        <div class="experience__wrapper">
             <div class="experience__wrapper-line">
 
                 <div class="card card--experience">
                     <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Web Developer</h3>
-                        <p class="card__subheader">English Style</p>
-<!--                        <p class="card__date">June 2022 - December 2023</p>-->
-                        <img class="card__logo" src="storage/engstyle.png" width="100" height="100" alt="engstyle">
-                    </div>
-
-                    <ul class="card__list card__list--experience">
-                        <li class="card__item">Creating and maintaining website</li>
-                        <li class="card__item">Responsible for the site&apos;s technical aspects, content and
-                            support
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Assistant Director/<br>Translator (Chinese)</h3>
-                        <p class="card__subheader">Stone Petroleum Equipment</p>
-<!--                        <p class="card__date">April 2015 - February 2016</p>-->
-                        <img class="card__logo" src="storage/stone.png" width="100" height="100" alt="stone">
-                    </div>
-
-
-                    <ul class="card__list card__list--experience">
-                        <li class="card__item">Searching and dealings with business partners</li>
-                        <li class="card__item">Office Management</li>
-                        <li class="card__item">Web page administration</li>
-                        <li class="card__item">Written and verbal translation</li>
-                        <li class="card__item">Office equipment maintaining</li>
-                        <li class="card__item">Hiring employees</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">1C software developer</h3>
-                        <p class="card__subheader">1C BIT</p>
-<!--                        <p class="card__date">December 2011 - April 2012</p>-->
-                        <img class="card__logo" src="storage/1c.png" width="100" height="100" alt="1c">
-                    </div>
-
-                    <ul class="card__list card__list--experience">
-                        <li class="card__item">Development 1C Software</li>
-                        <li class="card__item">Update and maintain 1C software</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Summer school Intern</h3>
-                        <p class="card__subheader">Intel Corporation</p>
-<!--                        <p class="card__date">June 2010 - August 2010</p>-->
-                        <img class="card__logo" src="storage/intel.png" width="100" height="100" alt="intel">
-                    </div>
-
-                    <ul class="card__list card__list--experience">
-                        <li class="card__item">Compiled daily reports for management</li>
-                        <li class="card__item">Conducted an analysis of existing reporting systems</li>
-                        <li class="card__item">Derived criteria for evaluating the effectiveness of reporting systems
-                        </li>
-                        <li class="card__item">Developed operating instructions for the reporting system</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div v-else class="experience__wrapper">
-
-            <div class="experience__wrapper-line">
-                <div class="card card--experience">
-                    <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Веб-разработчик</h3>
-                        <p class="card__subheader">Английский стиль</p>
+                        <h3 class="card__header">{{ currentLang === 'en' ? 'Web Developer' : 'Веб-разработчик' }}</h3>
+                        <p class="card__subheader">{{ currentLang === 'en' ? 'English Style' : 'Английский стиль' }}</p>
                         <!--                        <p class="card__date">June 2022 - December 2023</p>-->
                         <img class="card__logo" src="storage/engstyle.png" width="100" height="100" alt="engstyle">
                     </div>
 
                     <ul class="card__list card__list--experience">
-                        <li class="card__item">Создание и поддержка веб-сайта</li>
-                        <li class="card__item">Выполнение задач, связанных с техническими аспектами, содержанием и
-                            поддержкой сайта
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Creating and maintaining website' : 'Создание и поддержка веб-сайта'
+                            }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? "Responsible for the site&apos;s technical aspects, content and support" : 'Выполнение задач, связанных с техническими аспектами, содержанием и поддержкой сайта'
+                            }}
                         </li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Ассистент директора/<br>Переводчик (китайский)</h3>
-                        <p class="card__subheader">СтоунНефтьОборудование</p>
+                        <h3 class="card__header">{{
+                                currentLang === 'en' ? 'Assistant Director/' : 'Ассистент директора/'
+                            }}<br>{{ currentLang === 'en' ? 'Translator (Chinese)' : 'Переводчик (китайский)' }}</h3>
+                        <p class="card__subheader">
+                            {{ currentLang === 'en' ? 'Stone Petroleum Equipment' : 'СтоунНефтьОборудование' }}</p>
                         <!--                        <p class="card__date">April 2015 - February 2016</p>-->
                         <img class="card__logo" src="storage/stone.png" width="100" height="100" alt="stone">
                     </div>
 
 
                     <ul class="card__list card__list--experience">
-                        <li class="card__item">Поиск и взаимодействие с деловыми партнерами</li>
-                        <li class="card__item">Управление офисом</li>
-                        <li class="card__item">Администрирование веб-страницы</li>
-                        <li class="card__item">Письменный и устный перевод</li>
-                        <li class="card__item">Обслуживание офисного оборудования</li>
-                        <li class="card__item">Наем сотрудников</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Searching and dealings with business partners' : 'Поиск и взаимодействие с деловыми партнерами'
+                            }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Office Management' : 'Управление офисом'
+                            }}
+                        </li>
+                        <li class="card__item">
+                            {{ currentLang === 'en' ? 'Web page administration' : 'Администрирование веб-страницы' }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Written and verbal translation' : 'Письменный и устный перевод'
+                            }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Office equipment maintaining' : 'Обслуживание офисного оборудования'
+                            }}
+                        </li>
+                        <li class="card__item">{{ currentLang === 'en' ? 'Hiring employees' : 'Наем сотрудников' }}</li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">1C Разработчик</h3>
-                        <p class="card__subheader">1C BIT</p>
+                        <h3 class="card__header">{{
+                                currentLang === 'en' ? '1C software developer' : '1C Разработчик'
+                            }}</h3>
+                        <p class="card__subheader">{{ currentLang === 'en' ? '1C BIT' : '1C BIT' }}</p>
                         <!--                        <p class="card__date">December 2011 - April 2012</p>-->
                         <img class="card__logo" src="storage/1c.png" width="100" height="100" alt="1c">
                     </div>
 
                     <ul class="card__list card__list--experience">
-                        <li class="card__item">Разработка 1C программ</li>
-                        <li class="card__item">Обновление и установка программного обеспечения 1C</li>
+                        <li class="card__item">
+                            {{ currentLang === 'en' ? 'Development 1C Software' : 'Разработка 1C программ' }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Update and maintain 1C software' : 'Обновление и установка программного обеспечения 1C'
+                            }}
+                        </li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">Интерн</h3>
-                        <p class="card__subheader">Intel Corporation</p>
+                        <h3 class="card__header">{{ currentLang === 'en' ? 'Summer school Intern' : 'Интерн' }}</h3>
+                        <p class="card__subheader">{{
+                                currentLang === 'en' ? 'Intel Corporation' : 'Intel Corporation'
+                            }}</p>
                         <!--                        <p class="card__date">June 2010 - August 2010</p>-->
                         <img class="card__logo" src="storage/intel.png" width="100" height="100" alt="intel">
                     </div>
 
                     <ul class="card__list card__list--experience">
-                        <li class="card__item">Ежедневная отчетность для руководства</li>
-                        <li class="card__item">Проведен анализ существующих систем отчетности</li>
-                        <li class="card__item">Разработка критериев оценки эффективности систем отчетности
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Compiled daily reports for management' : 'Ежедневная отчетность для руководства'
+                            }}
                         </li>
-                        <li class="card__item">Разработка инструкции по эксплуатации системы отчетности</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Conducted an analysis of existing reporting systems' : 'Проведен анализ существующих систем отчетности'
+                            }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Derived criteria for evaluating the effectiveness of reporting systems' : 'Разработка критериев оценки эффективности систем отчетности'
+                            }}
+                        </li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Developed operating instructions for the reporting system' : 'Разработка инструкции по эксплуатации системы отчетности'
+                            }}
+                        </li>
                     </ul>
                 </div>
             </div>
 
-
         </div>
 
-        <button class="experience__scroll-button scroll-left-button" id="scrollExpLeftButton" aria-label="Left"></button>
-        <button class="experience__scroll-button scroll-right-button" id="scrollExpRightButton" aria-label="Right"></button>
+
+        <button class="experience__scroll-button scroll-left-button" id="scrollExpLeftButton"
+                aria-label="Left"></button>
+        <button class="experience__scroll-button scroll-right-button" id="scrollExpRightButton"
+                aria-label="Right"></button>
     </section>
 </template>
 
@@ -164,7 +136,7 @@ export default {
     methods: {},
     mounted() {
         const langButtons = document.querySelectorAll('[name="lang"]');
-        const traitsSection = document.querySelector('.traits');
+        const projectsSection = document.querySelector('.projects');
         const experienceSection = document.querySelector('.experience');
         const experienceTitle = document.querySelector('.experience__title');
         const experienceWrapper = document.querySelector('.experience__wrapper');
@@ -184,49 +156,48 @@ export default {
 
         function scrollExperience(padding, translate) {
             experienceSection.style.paddingTop = padding + 'px';
-            experienceTitle.style.transform = 'translateY(-' + translate + 'px)';
-            experienceTitle.classList.remove('about--transform');
-            experienceWrapper.style.transform = 'translateY(-' + translate + 'px)';
-            experienceWrapper.classList.remove('about--transform');
+            experienceTitle.style.transform = 'translateY(' + translate + 'px)';
+            experienceTitle.classList.remove('experience--transform');
+            experienceWrapper.style.transform = 'translateY(' + translate + 'px)';
+            experienceWrapper.classList.remove('experience--transform');
         }
 
-        function bounce(){
-            cardLogos.forEach(logo=>logo.classList.add('card__logo--bounce'));
+        function bounce() {
+            cardLogos.forEach(logo => logo.classList.add('card__logo--bounce'));
         }
 
         window.addEventListener('scroll', function () {
             let scrollPosition = window.pageYOffset;
-            let offset = traitsSection.offsetHeight;
-            if (scrollPosition/ 3 > offset  && scrollPosition/4 < offset && window.innerWidth < 767) {
+            let offset = projectsSection.offsetHeight;
+            console.log('scrollPosition '+scrollPosition);
+            console.log('offset '+offset);
+            if (scrollPosition  <= 3500  && window.innerWidth < 767) {
+                scrollExperience(100, 50);
+                cardLogos.forEach(logo => logo.classList.remove('card__logo--bounce'));
 
-                scrollExperience(50, 20);
-                cardLogos.forEach(logo=>logo.classList.add('card__logo--bounce'));
-            } else if (scrollPosition/2.4 >= offset && scrollPosition/2.7 <= offset && window.innerWidth < 767) {
+            } else if (scrollPosition  > 3500  && window.innerWidth < 767) {
+                cardLogos.forEach(logo => logo.classList.add('card__logo--bounce'));
+                scrollExperience(100, -20);
+                // console.log('scrollPosition/3 '+scrollPosition/3);
 
-                scrollExperience(100, 10);
-            } else if (scrollPosition/ 2.4 > offset  && scrollPosition/ 2.9 < offset && window.innerWidth >= 1200) {
+            } else if (scrollPosition >= 3800  && window.innerWidth >= 1200) {
+                scrollExperience(130, -80);
+                cardLogos.forEach(logo => logo.classList.add('card__logo--bounce'));
 
-                scrollExperience(110, 80);
-            } else if (scrollPosition / 2.95 >= offset && window.innerWidth >= 1200) {
+            }else if (scrollPosition < 3800  && window.innerWidth >= 1200) {
+                scrollExperience(130, 80);
+                cardLogos.forEach(logo => logo.classList.remove('card__logo--bounce'));
 
-                scrollExperience(130, 10);
-                cardLogos.forEach(logo=>logo.classList.add('card__logo--bounce'));
-            } else if (scrollPosition/3 >= offset && scrollPosition/4 < offset && window.innerWidth >= 767 && window.innerWidth < 1200) {
+            }else if (scrollPosition <= 5100  && window.innerWidth >= 767 && window.innerWidth < 1200) {
 
-                scrollExperience(150, 10);
-                cardLogos.forEach(logo=>logo.classList.add('card__logo--bounce'));
-            } else if (scrollPosition/ 2.6 >= offset && scrollPosition/2.9 < offset  && window.innerWidth >= 767 && window.innerWidth < 1200) {
+                scrollExperience(150, 0);
+                cardLogos.forEach(logo => logo.classList.remove('card__logo--bounce'));
+            } else if (scrollPosition >= 5100 && window.innerWidth >= 767 && window.innerWidth < 1200) {
+                console.log('scrollPosition/4 '+scrollPosition/4);
+                scrollExperience(150, -50);
+                cardLogos.forEach(logo => logo.classList.add('card__logo--bounce'));
 
-                scrollExperience(75, 10);
-            }
-            else {
-                //experienceSection.style.paddingTop = '40px';
-                experienceTitle.style.transform = 'translateY(100px)';
-                experienceTitle.classList.remove('about--transform');
-                experienceWrapper.style.transform = 'translateY(100px)';
-                experienceWrapper.classList.remove('about--transform');
-                cardLogos.forEach(logo=>logo.classList.remove('card__logo--bounce'));
-            }
+                }
         });
 
 

@@ -1,13 +1,13 @@
 <template>
     <section class="intro section-link" id="home" >
-        <div class="main-wrapper">
+
 
         <h1 v-if="currentLang === 'en'" class="visually-hidden" >CV of Yulia Reutova. I am a Frontend developer / Web
             developer</h1>
         <h1 v-else class="visually-hidden">Резюме Юлии Реутовой. Фронтенд-разработчик. Вэб-разработчик.</h1>
             <div class="intro__languge-battons-wrapper" >
-                <LanguageButton value="en">English</LanguageButton>
-                <LanguageButton value="ru">Русский</LanguageButton>
+                <LanguageButton value="en">Eng</LanguageButton>
+                <LanguageButton value="ru">Рус</LanguageButton>
             </div>
 
             <div class="intro__image-wrapper">
@@ -26,7 +26,7 @@
                 class="intro__name">Юлия<br> Реутова</span><br> и Я - <span
                 class="intro__detail">Фронтенд разработчик</span>.</p>
         </div>
-        </div>
+
     </section>
 </template>
 

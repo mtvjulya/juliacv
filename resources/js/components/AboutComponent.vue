@@ -1,31 +1,40 @@
 <template>
     <section class="about section-link" id="about">
         <h2 class="main__title about__title">{{ currentLang === 'en' ? 'About me' : 'Обо мне' }}</h2>
-        <div v-if="currentLang === 'en'" class="about__wrapper">
+        <div  class="about__wrapper">
             <div class="about__wrapper-line">
                 <div class="card">
                     <div class="card__header-wrapper">
-                        <h3 class="card__header">Education:</h3>
+                        <h3 class="card__header">{{ currentLang === 'en' ? 'Education:' : 'Образование:' }}</h3>
                     </div>
 
                     <ul class="card__list card__list--education">
-                        <li class="card__item"><span class="card__item-name">HTML Academy</span> - Frontend developer/
-                            React
-                            developer
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'HTML Academy ' : 'HTML Academy '
+                            }}</span>
+                            {{ currentLang === 'en' ? '- Frontend developer / React developer' : '- Frontend разработчик / React разработчик' }}
+
                         </li>
                         <li class="card__item"><span
-                            class="card__item-name">Harbin Institute of Technology, China</span> - MSc in Management
-                            Science and Engineering (IBM program).
+                            class="card__item-name">{{
+                                currentLang === 'en' ? 'Harbin Institute of Technology, China ' : 'Харбинский Политехнический Университет, Китай '
+                            }}</span>{{
+                                currentLang === 'en' ? '- MSc in Management Science and Engineering(IBM program) ' : ' - Степень Магистра в области Управления и Техники'}}
                         </li>
-                        <li class="card__item"><span class="card__item-name">Siberian State University, Russia</span> -
-                            MSc
-                            in System Analysis and Control Process.
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Siberian State University, Russia':'Сибирский Федеральный Университет'}}</span>{{
+                                currentLang === 'en' ? ' - MSc in System Analysis and Control Process':' - Степень Магистра в области Системный Анализ и Управление'}}
                         </li>
-                        <li class="card__item"><span class="card__item-name">Siberian State University, Russia</span> -
-                            Interpreter/Translator for Business communication (English).
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Siberian State University, Russia ' : 'Сибирский Федеральный Университет '
+                            }}</span>{{
+                                currentLang === 'en' ? ' - Interpreter / Translator in Business communication (English)' : '- Переводчик в сфере профессиональных коммуникаций'
+                            }}
                         </li>
-                        <li class="card__item"><span class="card__item-name">Siberian State University, Russia</span> -
-                            Bachelor in System Analysis and Control Process.
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Siberian State University, Russia ' : 'Сибирский Федеральный Университет '}}</span>{{
+                                currentLang === 'en' ? '- Bachelor in System Analysis and Control Process' : '- Степень Бакалавра в области Системный Анализ и Управление'
+                            }}
                         </li>
                     </ul>
 
@@ -33,45 +42,60 @@
 
                 <div class="card">
                     <div class="card__header-wrapper">
-                        <h3 class="card__header">Tech Skills:</h3>
+                        <h3 class="card__header">{{
+                                currentLang === 'en' ? 'Tech Skills:':'Технические навыки:'}}</h3>
                     </div>
 
                     <ul class="card__list card__list--hard-skills">
-                        <li class="card__item ">JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP</li>
-                        <li class="card__item">3D MAX, Blender, Adobe Animate</li>
-                        <li class="card__item">SQL, PostgreSQL</li>
-                        <li class="card__item">CorelDraw, Photoshop</li>
-                        <li class="card__item">MS Office, MS Excel</li>
-                        <li class="card__item">Figma</li>
+                        <li class="card__item ">{{
+                                currentLang === 'en' ? 'JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP':'JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? '3D MAX, Blender, Adobe Animate':'3D MAX, Blender, Adobe Animate'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'SQL, PostgreSQL':'SQL, PostgreSQL'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'CorelDraw, Photoshop':'CorelDraw, Photoshop'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'MS Office, MS Excel':'MS Office, MS Excel'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Figma':'Figma'}}</li>
                     </ul>
 
                 </div>
                 <div class="card">
                     <div class="card__header-wrapper">
-                        <h3 class="card__header">Languages:</h3>
+                        <h3 class="card__header">{{
+                                currentLang === 'en' ? 'Languages:':'Языки:'}}</h3>
                     </div>
 
                     <ul class="card__list card__list--lang">
-                        <li class="card__item ">English</li>
-                        <li class="card__item">Russian</li>
-                        <li class="card__item">Chinese</li>
+                        <li class="card__item ">{{
+                                currentLang === 'en' ? 'English':'Английский'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Russian':'Русский'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'Chinese':'Китайский'}}</li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <div class="card__header-wrapper">
-                        <h3 class="card__header">Awards:</h3>
+                        <h3 class="card__header">{{
+                                currentLang === 'en' ? 'Awards:':'Награды:'}}</h3>
                     </div>
 
                     <ul class="card__list card__list--awards">
-                        <li class="card__item "><span class="card__item-name">Siberian State University:</span> The best
-                            student
+                        <li class="card__item "><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Siberian State University: ':'Сибирский Федеральный Университет:'}}</span> {{
+                                currentLang === 'en' ? 'The best student':'Лучший студент СФУ'}}
                         </li>
-                        <li class="card__item"><span class="card__item-name">Harbin Institute of Technology:</span>
-                            Outstanding International Student
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Harbin Institute of Technology: ':'Харбинский Политехнический Университет:'}}</span>{{
+                                currentLang === 'en' ? 'Outstanding International Student':' Лучший инностранный студент'}}
                         </li>
-                        <li class="card__item"><span class="card__item-name">Modelling United Nations event:</span> Best
-                            Position Paper
+                        <li class="card__item"><span class="card__item-name">{{
+                                currentLang === 'en' ? 'Modelling United Nations event: ':'Моделирование деятельности ООН ХПИ:'}}</span>{{
+                                currentLang === 'en' ? 'Best Position Paper':' награда в номинации “Лучший мемерандум” '}}
                         </li>
                     </ul>
 
@@ -79,79 +103,7 @@
             </div>
 
         </div>
-        <div v-else class="about__wrapper">
-            <div class="about__wrapper-line">
-                <div class="card">
-                    <div class="card__header-wrapper">
-                        <h3 class="card__header">Образование:</h3>
-                    </div>
 
-                    <ul class="card__list card__list--education">
-                        <li class="card__item"><span class="card__item-name">HTML Academy</span> - Frontend разработчик/
-                            React разработчик
-                        </li>
-                        <li class="card__item"><span
-                            class="card__item-name">Харбинский Политехнический Университет, Китай</span> - Степень Магистра в области Управления и Техники.
-                        </li>
-                        <li class="card__item"><span class="card__item-name">Сибирский Федеральный Университет</span> -
-                            Степень Магистра в области Системный Анализ и Управление.
-                        </li>
-                        <li class="card__item"><span class="card__item-name">Сибирский Федеральный Университет</span> -
-                            Переводчик в сфере профессиональных коммуникаций.
-                        </li>
-                        <li class="card__item"><span class="card__item-name">Сибирский Федеральный Университет</span> -
-                            Степень Бакалавра в области Системный Анализ и Управление.
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="card">
-                    <div class="card__header-wrapper">
-                        <h3 class="card__header">Технические навыки:</h3>
-                    </div>
-
-                    <ul class="card__list card__list--hard-skills">
-                        <li class="card__item ">JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP</li>
-                        <li class="card__item">3D MAX, Blender, Adobe Animate</li>
-                        <li class="card__item">SQL, PostgreSQL</li>
-                        <li class="card__item">CorelDraw, Photoshop</li>
-                        <li class="card__item">MS Office, MS Excel</li>
-                        <li class="card__item">Figma</li>
-                    </ul>
-
-                </div>
-                <div class="card">
-                    <div class="card__header-wrapper">
-                        <h3 class="card__header">Языки:</h3>
-                    </div>
-
-                    <ul class="card__list card__list--lang">
-                        <li class="card__item ">Английский</li>
-                        <li class="card__item">Русский</li>
-                        <li class="card__item">Китайский</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card__header-wrapper">
-                        <h3 class="card__header">Награды:</h3>
-                    </div>
-
-                    <ul class="card__list card__list--awards">
-                        <li class="card__item "><span class="card__item-name">Сибирский Федеральный Университет:</span> : Лучший студент СФУ
-                        </li>
-                        <li class="card__item"><span class="card__item-name">Харбинский Политехнический Университет:</span>
-                            Outstanding International Student
-                        </li>
-                        <li class="card__item"><span class="card__item-name">Моделирование деятельности ООН ХПИ:</span> награда в номинации “Best Position Paper”
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-        </div>
         <button class="about__scroll-button scroll-left-button" id="scrollLeftButton" aria-label="Left"></button>
         <button class="about__scroll-button scroll-right-button" id="scrollRightButton" aria-label="Right"></button>
     </section>
@@ -206,19 +158,17 @@ export default {
                 scrollAbout(150, 10);
             } else if (scrollPosition >= offset && window.innerWidth < 767) {
                 scrollAbout(150, 10);
-            } else if (scrollPosition >= offset && window.innerWidth >= 767 && window.innerWidth < 1200) {
-                scrollAbout(150, 10);
-            } else if (scrollPosition >= offset / 3 && window.innerWidth >= 767 && window.innerWidth < 1200) {
-                scrollAbout(75, 10);
+
+            } else if (scrollPosition >= offset/3  && window.innerWidth >= 767 && window.innerWidth < 1200) {
+                scrollAbout(250, 50);
             } else {
-                aboutSection.style.paddingTop = '10px';
+                aboutSection.style.paddingTop = '150px';
                 aboutTitle.style.transform = 'translateY(100px)';
                 aboutTitle.classList.remove('about--transform');
                 aboutWrapper.style.transform = 'translateY(100px)';
                 aboutWrapper.classList.remove('about--transform');
             }
         });
-
 
 
         let count = 0;
