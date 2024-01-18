@@ -86,9 +86,22 @@
     transition: opacity 0.2s ease;
 
 }
+//
+//.intro__image-wrapper:hover .intro__image-container {
+//    background-image: url("/storage/app/public/me-5.png");
+//    @supports (background-image: url('/storage/app/public/me-5-smaller.webp'))
+//        {
+//            background-image: url('/storage/app/public/me-5-smaller.webp'); /* Используйте WebP, если браузер поддерживает */
+//        }
+//    opacity: 1;
+//    transition: opacity 0s ease;
+//}
 
 .intro__image-wrapper:hover .intro__image-container {
     background-image: url("/storage/app/public/me-5.png");
+    @supports (background-image: url('/storage/app/public/me-5-smaller.webp')) {
+        background-image: url('/storage/app/public/me-5-smaller.webp');
+    }
     opacity: 1;
     transition: opacity 0s ease;
 }

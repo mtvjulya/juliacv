@@ -12,7 +12,12 @@
 
             <div class="intro__image-wrapper">
                 <div class="intro__image-container"></div>
-                <img class="intro__image" src="/storage/me-8.png">
+                <picture>
+                    <source srcset="/storage/me-8-smaller.webp" type="image/webp">
+                    <source srcset="/storage/me-8-smaller.png" type="image/jpeg">
+                    <img class="intro__image" src="/storage/me-8-smaller.png" alt="Yulia Reutova, a web-developer" width="450" height="800">
+                </picture>
+<!--                <img class="intro__image" src="/storage/me-8-smaller.png">-->
             </div>
 
 
