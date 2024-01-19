@@ -13,9 +13,14 @@
             <div class="intro__image-wrapper">
                 <div class="intro__image-container"></div>
                 <picture>
-                    <source srcset="/storage/me-8-smaller.webp" type="image/webp">
-                    <source srcset="/storage/me-8-smaller.png" type="image/jpeg">
-                    <img class="intro__image" src="/storage/me-8-smaller.png" alt="Yulia Reutova, a web-developer" width="450" height="800">
+                    <source srcset="/storage/me-5-smaller.webp" type="image/webp">
+                    <source srcset="/storage/me-5-smaller.png" type="image/jpeg">
+                    <img class="intro__image" src="/storage/me-5-smaller.png" alt="Yulia Reutova, a web-developer" width="450" height="800">
+
+                    <source media="(max-width: 767px)" srcset="/storage/me-5-smaller-mobile.webp" type="image/webp">
+                    <source media="(max-width: 767px)" srcset="/storage/me-5-smaller-mobile.png" type="image/png">
+                    <img class="intro__image" src="/storage/me-5-smaller-mobile.png"
+                         alt="Yulia Reutova, a web-developer" width="297" height="520">
                 </picture>
 <!--                <img class="intro__image" src="/storage/me-8-smaller.png">-->
             </div>

@@ -10,6 +10,9 @@
     background-color: $black;
     color: $white;
     background-image: url('/storage/app/public/intro-3.jpg');
+    @supports (background-image: url('/storage/app/public/intro-3.webp')) {
+        background-image: url('/storage/app/public/intro-3.webp');
+    }
 }
 
 .intro__languge-battons-wrapper {
@@ -81,11 +84,11 @@
     // transition: opacity 0.3s ease;
 }
 
-.intro__image-wrapper:hover .intro__image {
-    opacity: 0;
-    transition: opacity 0.2s ease;
-
-}
+//.intro__image-wrapper:hover .intro__image {
+//    opacity: 0;
+//    transition: opacity 0.2s ease;
+//
+//}
 //
 //.intro__image-wrapper:hover .intro__image-container {
 //    background-image: url("/storage/app/public/me-5.png");
@@ -107,13 +110,15 @@
 }
 
 /* Если вы хотите, чтобы представление изменилось при наведении, можете использовать следующий код */
-
 //
 //@keyframes fade {
 //    0% { opacity: 1; }
 //    100% { opacity: 0.6; }
 //}
 @media (max-width: 767px) {
+    //.intro {
+    //    background-image: url('/storage/app/public/intro-3.jpg');
+    //}
 
     .intro__languge-battons-wrapper {
         position: absolute;
