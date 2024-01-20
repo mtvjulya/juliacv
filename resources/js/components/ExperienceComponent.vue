@@ -169,8 +169,7 @@ export default {
         window.addEventListener('scroll', function () {
             let scrollPosition = window.pageYOffset;
             let offset = projectsSection.offsetHeight;
-            console.log('scrollPosition '+scrollPosition);
-            console.log('offset '+offset);
+
             if (scrollPosition  <= 3500  && window.innerWidth < 767) {
                 scrollExperience(100, 50);
                 cardLogos.forEach(logo => logo.classList.remove('card__logo--bounce'));
@@ -193,7 +192,7 @@ export default {
                 scrollExperience(150, 0);
                 cardLogos.forEach(logo => logo.classList.remove('card__logo--bounce'));
             } else if (scrollPosition >= 5100 && window.innerWidth >= 767 && window.innerWidth < 1200) {
-                console.log('scrollPosition/4 '+scrollPosition/4);
+
                 scrollExperience(150, -50);
                 cardLogos.forEach(logo => logo.classList.add('card__logo--bounce'));
 

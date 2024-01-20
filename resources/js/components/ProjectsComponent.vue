@@ -136,7 +136,7 @@ export default {
 
             this.popupOpen = false;
 
-        }
+        },
 
     },
     mounted() {
@@ -193,7 +193,15 @@ export default {
 
             }
         });
-
+        window.addEventListener('click', evt => {
+            //evt.preventDefault();
+            const projectsSection = document.querySelector('.projects');
+            const isClickInsidePopup = document.querySelector('.project__popup');
+            const isClickInsidePopupToggle = document.querySelector('.project__close-popup-button');
+            if (!(isClickInsidePopup.contains(evt.target)) && !(isClickInsidePopupToggle.contains(evt.target))&& !(projectsSection.contains(evt.target))) {
+                this.popupOpen = false;
+            }
+        })
 
     }
 };
