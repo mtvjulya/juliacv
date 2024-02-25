@@ -29,7 +29,7 @@
                     <div class="card__header-wrapper card__header-wrapper--experience">
                         <h3 class="card__header">{{
                                 currentLang === 'en' ? 'Assistant Director/' : 'Ассистент директора/'
-                            }}<br>{{ currentLang === 'en' ? 'Translator (Chinese)' : 'Переводчик (китайский)' }}</h3>
+                            }}<br>{{ currentLang === 'en' ? 'Translator' : 'Переводчик (китайский)' }}</h3>
                         <p class="card__subheader">
                             {{ currentLang === 'en' ? 'Stone Petroleum Equipment' : 'СтоунНефтьОборудование' }}</p>
                         <!--                        <p class="card__date">April 2015 - February 2016</p>-->
@@ -64,7 +64,7 @@
                 <div class="card">
                     <div class="card__header-wrapper card__header-wrapper--experience">
                         <h3 class="card__header">{{
-                                currentLang === 'en' ? '1C software developer' : '1C Разработчик'
+                                currentLang === 'en' ? '1C Software developer' : '1C Разработчик'
                             }}</h3>
                         <p class="card__subheader">{{ currentLang === 'en' ? '1C BIT' : '1C BIT' }}</p>
                         <!--                        <p class="card__date">December 2011 - April 2012</p>-->
@@ -73,10 +73,10 @@
 
                     <ul class="card__list card__list--experience">
                         <li class="card__item">
-                            {{ currentLang === 'en' ? 'Development 1C Software' : 'Разработка 1C программ' }}
+                            {{ currentLang === 'en' ? 'Software development by using 1C programming language' : 'Разработка 1C программ' }}
                         </li>
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Update and maintain 1C software' : 'Обновление и установка программного обеспечения 1C'
+                                currentLang === 'en' ? 'Update and maintain a software' : 'Обновление и установка программного обеспечения 1C'
                             }}
                         </li>
                     </ul>
@@ -84,7 +84,7 @@
 
                 <div class="card">
                     <div class="card__header-wrapper card__header-wrapper--experience">
-                        <h3 class="card__header">{{ currentLang === 'en' ? 'Summer school Intern' : 'Интерн' }}</h3>
+                        <h3 class="card__header">{{ currentLang === 'en' ? 'Summer Intern' : 'Интерн' }}</h3>
                         <p class="card__subheader">{{
                                 currentLang === 'en' ? 'Intel Corporation' : 'Intel Corporation'
                             }}</p>
@@ -94,19 +94,19 @@
 
                     <ul class="card__list card__list--experience">
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Compiled daily reports for management' : 'Ежедневная отчетность для руководства'
+                                currentLang === 'en' ? 'Daily reports' : 'Ежедневная отчетность для руководства'
                             }}
                         </li>
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Conducted an analysis of existing reporting systems' : 'Проведен анализ существующих систем отчетности'
+                                currentLang === 'en' ? 'Analise of existing reporting systems' : 'Проведен анализ существующих систем отчетности'
                             }}
                         </li>
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Derived criteria for evaluating the effectiveness of reporting systems' : 'Разработка критериев оценки эффективности систем отчетности'
+                                currentLang === 'en' ? 'Derive criteria for evaluating the effectiveness of reporting systems' : 'Разработка критериев оценки эффективности систем отчетности'
                             }}
                         </li>
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Developed operating instructions for the reporting system' : 'Разработка инструкции по эксплуатации системы отчетности'
+                                currentLang === 'en' ? 'Develop instructions for the reporting system' : 'Разработка инструкции по эксплуатации системы отчетности'
                             }}
                         </li>
                     </ul>

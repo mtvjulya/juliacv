@@ -17,23 +17,23 @@
                         </li>
                         <li class="card__item"><span
                             class="card__item-name">{{
-                                currentLang === 'en' ? 'Harbin Institute of Technology, China ' : 'Харбинский Политехнический Университет, Китай '
+                                currentLang === 'en' ? 'Harbin Institute of Technology' : 'Харбинский Политехнический Университет, Китай '
                             }}</span>{{
-                                currentLang === 'en' ? '- MSc in Management Science and Engineering(IBM program) ' : ' - Степень Магистра в области Управления и Техники'}}
+                                currentLang === 'en' ? '- MSc in Management Science and Engineering' : ' - Степень Магистра в области Управления и Техники'}}
                         </li>
                         <li class="card__item"><span class="card__item-name">{{
-                                currentLang === 'en' ? 'Siberian State University, Russia':'Сибирский Федеральный Университет'}}</span>{{
-                                currentLang === 'en' ? ' - MSc in System Analysis and Control Process':' - Степень Магистра в области Системный Анализ и Управление'}}
+                                currentLang === 'en' ? 'Institute of Space and Information Technologies, Siberian Federal University':'Сибирский Федеральный Университет'}}</span>{{
+                                currentLang === 'en' ? ' - MSc in System Analysis and Control':' - Степень Магистра в области Системный Анализ и Управление'}}
                         </li>
                         <li class="card__item"><span class="card__item-name">{{
-                                currentLang === 'en' ? 'Siberian State University, Russia ' : 'Сибирский Федеральный Университет '
+                                currentLang === 'en' ? 'Siberian State University' : 'Сибирский Федеральный Университет '
                             }}</span>{{
                                 currentLang === 'en' ? ' - Interpreter / Translator in Business communication (English)' : '- Переводчик в сфере профессиональных коммуникаций'
                             }}
                         </li>
                         <li class="card__item"><span class="card__item-name">{{
-                                currentLang === 'en' ? 'Siberian State University, Russia ' : 'Сибирский Федеральный Университет '}}</span>{{
-                                currentLang === 'en' ? '- Bachelor in System Analysis and Control Process' : '- Степень Бакалавра в области Системный Анализ и Управление'
+                                currentLang === 'en' ? 'Institute of Space and Information Technologies, Siberian Federal University' : 'Сибирский Федеральный Университет '}}</span>{{
+                                currentLang === 'en' ? '- Bachelor in System Analysis and Control' : '- Степень Бакалавра в области Системный Анализ и Управление'
                             }}
                         </li>
                     </ul>
@@ -48,7 +48,7 @@
 
                     <ul class="card__list card__list--hard-skills">
                         <li class="card__item ">{{
-                                currentLang === 'en' ? 'JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP':'JavaScript, HTML, CSS, Bootstrap, React, Laravel, PHP'}}</li>
+                                currentLang === 'en' ? 'JavaScript, Python, Typescript, HTML, CSS, Bootstrap, React, Laravel, PHP':'JavaScript, Python, Typescript, HTML, CSS, Bootstrap, React, Laravel, PHP'}}</li>
                         <li class="card__item">{{
                                 currentLang === 'en' ? '3D MAX, Blender, Adobe Animate':'3D MAX, Blender, Adobe Animate'}}</li>
                         <li class="card__item">{{
@@ -58,7 +58,9 @@
                         <li class="card__item">{{
                                 currentLang === 'en' ? 'MS Office, MS Excel':'MS Office, MS Excel'}}</li>
                         <li class="card__item">{{
-                                currentLang === 'en' ? 'Figma':'Figma'}}</li>
+                                currentLang === 'en' ? 'Figma, Sketch':'Figma, Sketch'}}</li>
+                        <li class="card__item">{{
+                                currentLang === 'en' ? 'GitHub, Git':'GitHub, Git'}}</li>
                     </ul>
 
                 </div>
